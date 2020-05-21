@@ -169,6 +169,11 @@ Green.
 
 Wrote test for `deposit` method taking 200 results in a string showing deposited 200.00 and balance of 200.00. Red.
 
+- `deposit` has a variable `message` defined as a string with placeholders.
+- `deposit` returns `message` formatted passing in the amount.
+
+Green.
+
 <!-- links -->
 
 [pytest]: https://docs.pytest.org/en/latest/
