@@ -159,8 +159,13 @@ In `test/account_test.py`:
 
 Wrote a test for an `Account` class, with a `deposit` method taking 100 results in a string showing deposited 100 and balance of 100. Red.
 
+In `lib/account.py`:
 
+- Added a an `Account` class, that has a method `deposit`, taking self, and an amount, and returning the relevant string hardcoded.
 
+Also added `__init__.py` files to each of the root fir, `lib`, and `test`, in order to allow `Account` to be imported into the test file from `lib.account`.
+
+Green.
 
 <!-- links -->
 
