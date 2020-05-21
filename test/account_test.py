@@ -1,3 +1,6 @@
+from lib.account import Account
+
+
 class TestDeposit:
     def test_pass_100_balance_100(self):
         account = Account()
