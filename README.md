@@ -17,6 +17,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
   - [Domain Modelling](#domain-modelling)
   - [User Stories](#user-stories)
   - [Set up](#set-up)
+  - [Deposits](#deposits)
 
 ## Spec
 
@@ -53,6 +54,8 @@ Coming soon.
 ## Dependencies
 
 Development:
+
+[pytest] - Testing framework
 
 ## Development Journal
 
@@ -127,3 +130,38 @@ CRC modelling:
 > I want the statement transactions to be ordered from newest to oldest.
 
 ### Set up
+
+This is my first ever Python project.
+
+I am using Python 3.8.3.
+
+For my tests I am using pytest, installed with:
+
+```shell
+pip install -U pytest
+```
+
+### Deposits
+
+- [ ] 1
+
+> As a Bank Manager,  
+> So that we only take customers money,  
+> I want accounts to start with balance 0
+
+- [ ] 2
+
+> As a Customer,  
+> So I can keep my money safe,  
+> I want to be able to deposit into my account
+
+In `test/account_test.py`:
+
+Wrote a test for an `Account` class, with a `deposit` method taking 100 results in a string showing deposited 100 and balance of 100. Red.
+
+
+
+
+<!-- links -->
+
+[pytest]: https://docs.pytest.org/en/latest/
