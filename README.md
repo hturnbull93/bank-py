@@ -167,6 +167,8 @@ Also added `__init__.py` files to each of the root fir, `lib`, and `test`, in or
 
 Green.
 
+Wrote test for `deposit` method taking 200 results in a string showing deposited 200.00 and balance of 200.00. Red.
+
 <!-- links -->
 
 [pytest]: https://docs.pytest.org/en/latest/
