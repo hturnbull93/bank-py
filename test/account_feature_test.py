@@ -4,7 +4,7 @@ import datetime
 from lib.account import Account
 
 
-def xtest_feature():
+def test_feature():
     account = Account()
 
     with freeze_time("2012-01-10"):
