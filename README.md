@@ -216,6 +216,12 @@ Green.
 
 Wrote test for withdrawing 200 from an account with 1000, returned string has balance: 800.00. Red.
 
+- `withdraw` checks if the amount is 200 and returns the relevant string, else returns the string from before.
+
+Green.
+
+
+
 
 <!-- links -->
 
