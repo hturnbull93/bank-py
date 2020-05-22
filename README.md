@@ -322,7 +322,13 @@ Refactors:
 
 ### Back to the Statement
 
-The `Transaction` class can now be injected into the `Account` class
+The `Transaction` class can now be injected into the `Account` class.
+
+Wrote a test that the `deposit` method should call for a new `Transaction`.
+
+- `Account.__init__` takes a keyword argument `transaction_class` defaulting to `Transaction`.
+- `deposit` calls for a new `Transaction` instance passing in credit and balance.
+
 <!-- links -->
 
 [pytest]: https://docs.pytest.org/en/latest/
