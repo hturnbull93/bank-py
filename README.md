@@ -184,6 +184,19 @@ Green.
 
 Wrote test for `deposit` method taking 10.50, should in a string showing deposited 10.50 and balance of 10.50. Red.
 
+- In `deposit` assign `credit` with the passed amount * 100, to express it as pence.
+- add `credit` to the balance.
+- `displayBalance` and `displayCredit` assigned with the balance and credit divided by 100 (to convert the pence figure to pounds and pence).
+- Format string uses `:.2f` to convert to 2 decimal places.
+- return the format string with the `displayBalance` and `displayCredit`.
+
+Green.
+
+Refactors:
+
+- Extracted methods `pence` and `pounds`
+
+
 <!-- links -->
 
 [pytest]: https://docs.pytest.org/en/latest/

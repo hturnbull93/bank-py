@@ -2,6 +2,9 @@ class Account:
     STARTING_BALANCE = 0
     balance = STARTING_BALANCE
     def deposit(self, amount):
-        self.balance += amount
-        message = "{0}.00 deposited. Current balance: {1}.00"
-        return message.format(amount, self.balance)
+        credit = amount * 100
+        self.balance += credit
+        displayBalance = self.balance / 100
+        displayCredit = credit / 100
+        message = "{0:.2f} deposited. Current balance: {1:.2f}"
+        return message.format(displayCredit, displayBalance)
