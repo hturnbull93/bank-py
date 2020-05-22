@@ -176,6 +176,11 @@ Green.
 
 Wrote test for `deposit` method taking 200 then 100 results in a string showing deposited 100.00 and balance of 300.00. Red.
 
+- Add constant `STARTING_BALANCE` assigned with 0 to the class.
+- Assign variable `balance` with `STARTING_BALANCE`.
+- `deposit` adds the amount passed to the balance, then formats that amount and the balance into the string.
+
+Green.
 
 <!-- links -->
 
