@@ -31,17 +31,17 @@ class TestWithdraw:
         account.deposit(1000)
         return account
 
-    def test_withdraw_100_balance_100_less(self):
+    def test_pass_100_balance_100_less(self):
         account = self.account_with_one_thousand_deposited()
         result = "100.00 withdrawn. Current balance: 900.00"
         assert account.withdraw(100) == result
 
-    def test_withdraw_200_balance_200_less(self):
+    def test_pass_200_balance_200_less(self):
         account = self.account_with_one_thousand_deposited()
         result = "200.00 withdrawn. Current balance: 800.00"
         assert account.withdraw(200) == result
 
-    def test_withdraw_200_then_100_balance_300_less(self):
+    def test_pass_200_then_100_balance_300_less(self):
         account = self.account_with_one_thousand_deposited()
         account.withdraw(200)
         result = "100.00 withdrawn. Current balance: 700.00"
