@@ -408,14 +408,13 @@ Adjusted feature test to check stdout for the statement. Red.
 
 Green.
 
-
 ### Todo
 
 - [x] Write quickstart guide.
 - [x] Add screen previews.
-- [ ] Extract printer class.
+- [x] Extract printer class.
 - [ ] See if it is best practice to define anything that isn't intended to change as a CONSTANT.
-- [ ] Get it actually working in a REPL.
+- [x] Get it actually working in a REPL.
 - [ ] Do the mock dependency injection properly when I have more time.
 
 <!-- links -->
