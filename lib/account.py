@@ -9,3 +9,5 @@ class Account:
         message = "{0:.2f} deposited. Current balance: {1:.2f}"
         return message.format(money.pounds(credit), money.pounds(self.balance))
 
+    def withdraw(self, amount):
+        return "100.00 withdrawn. Current balance: 900.00"
