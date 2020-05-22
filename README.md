@@ -80,7 +80,7 @@ date || credit || debit || balance
 
 6. Set up your account with:
 
-   ```js
+   ```python
    account = Account()
    ```
 
@@ -92,9 +92,11 @@ date || credit || debit || balance
 | `account.withdraw(number)` | withdraw however much you want from your account, this figure is in pounds with pence as decimals. |
 | `account.statement()`      | prints a statement of all transactions so far                                                      |
 
+You should see something similar to the below:
+
 ## Screen Preview
 
-Coming soon.
+![Screen Preview](images/Bank-python-repl.png)
 
 ## Dependencies
 
