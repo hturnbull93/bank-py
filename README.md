@@ -18,6 +18,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
   - [User Stories](#user-stories)
   - [Set up](#set-up)
   - [Deposits](#deposits)
+  - [Withdrawals](#withdrawals)
 
 ## Spec
 
@@ -69,13 +70,13 @@ CRC modelling:
 
 ### User Stories
 
-- [ ] 1
+- [x] 1
 
 > As a Bank Manager,  
 > So that we only take customers money,  
 > I want accounts to start with balance 0
 
-- [ ] 2
+- [x] 2
 
 > As a Customer,  
 > So I can keep my money safe,  
@@ -143,13 +144,13 @@ pip install -U pytest
 
 ### Deposits
 
-- [ ] 1
+- [x] 1
 
 > As a Bank Manager,  
 > So that we only take customers money,  
 > I want accounts to start with balance 0
 
-- [ ] 2
+- [x] 2
 
 > As a Customer,  
 > So I can keep my money safe,  
@@ -184,6 +185,8 @@ Green.
 
 Wrote test for `deposit` method taking 10.50, should in a string showing deposited 10.50 and balance of 10.50. Red.
 
+The balance should probably be stored as pence, rather than as a float, but it needs to be display at two decimal places as if it were pounds and pence.
+
 - In `deposit` assign `credit` with the passed amount * 100, to express it as pence.
 - add `credit` to the balance.
 - `displayBalance` and `displayCredit` assigned with the balance and credit divided by 100 (to convert the pence figure to pounds and pence).
@@ -195,7 +198,18 @@ Green.
 Refactors:
 
 - Extracted methods `pence` and `pounds` to handle conversion to and from pounds and pence.
-- Moved these into their own module `money`
+- Moved these into their own module `money`.
+
+### Withdrawals
+
+- [ ] 3
+
+> As a Customer,  
+> So I can spend my money,  
+> I want to be able to withdraw from my account
+
+Wrote test for withdrawing 100 from an account with 1000, returned string has balance: 900.00. Red.
+
 
 
 <!-- links -->
