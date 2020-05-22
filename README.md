@@ -21,6 +21,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
   - [Withdrawals](#withdrawals)
   - [Statement](#statement)
   - [Transactions](#transactions)
+  - [Back to the Statement](#back-to-the-statement)
 
 ## Spec
 
@@ -319,6 +320,9 @@ Refactors:
 - Renamed `Transaction`'s `format` method to `render` to avoid confusion with the string method `format`.
 - Renamed helper methods that should be private prepending two underscores to their name.
 
+### Back to the Statement
+
+The `Transaction` class can now be injected into the `Account` class
 <!-- links -->
 
 [pytest]: https://docs.pytest.org/en/latest/
