@@ -47,3 +47,8 @@ class TestWithdraw:
         result = "100.00 withdrawn. Current balance: 700.00"
         assert account.withdraw(100) == result
 
+    def test_over_withdraw_returns_insufficient_funds(self):
+        account = self.account_with_one_thousand_deposited()
+        result = "Insufficient funds"
+        assert account.withdraw(1500) == result
+
