@@ -109,13 +109,13 @@ CRC modelling:
 > So I know when each transaction happened,  
 > I want transactions on my statement to have the date
 
-- [ ] 4.2
+- [x] 4.2
 
 > As a Customer,  
 > So I know how much each deposit was,  
 > I want deposits on my statement to have the credit amount.
 
-- [ ] 4.3
+- [x] 4.3
 
 > As a Customer,  
 > So I know how much each withdrawal was,  
@@ -282,9 +282,9 @@ Wrote a test for constructing a transaction instance with a credit value as a ke
 
 - `__init__` takes the keyword argument credit defaulting to `None`, assigning this to `self.credit`.
 - The method `format` takes self and `item`, then if `item` is not `None`,  it uses `pounds` imported from `money` to convert the item, then formats that as a 2 decimal place figure with a trailing space, else returns an empty string.
-- `display formats in the `format` of `self.credit` in column two.
+- `display` formats in the `format` of `self.credit` in column two.
 
-Geen.
+Green.
 
 - [x] 4.3
 
@@ -294,7 +294,10 @@ Geen.
 
 Wrote a test for constructing a transaction instance passing in debit value as keyword argument, its `display` method should include the debit value in the third column of the returned string. Red.
 
+- `__init__` takes the keyword argument debit defaulting to `None`, assigning this to `self.debit`.
+- In the third column of the template string, the `format` of `self.debit`.
 
+Green.
 
 <!-- links -->
 
