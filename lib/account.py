@@ -30,9 +30,7 @@ class Account:
 
     def statement(self):
         REVERSE_TRANSACTIONS = self.__reverse_transactions()
-        def mapping(transaction):
-            return transaction.display()
-        MAPPED_ROWS = map(mapping, REVERSE_TRANSACTIONS)
+        MAPPED_ROWS = map(self.__transaction_mapping, REVERSE_TRANSACTIONS)
         SEPARATOR = "\n"
         JOINED_ROWS = SEPARATOR.join(MAPPED_ROWS)
         return self.STATEMENT_HEADER + JOINED_ROWS
@@ -45,3 +43,6 @@ class Account:
         REVERSE_TRANSACTIONS = self.TRANSACTION_HISTORY.copy()
         REVERSE_TRANSACTIONS.reverse()
         return REVERSE_TRANSACTIONS
+
+    def __transaction_mapping(self, transaction):
+        return transaction.display()

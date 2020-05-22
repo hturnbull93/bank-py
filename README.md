@@ -355,6 +355,7 @@ Passing the feature test:
 Refactors:
 
 - Extracted a `__reverse_transactions` method to copy and reverse the transactions.
+- Also extracted a `__transaction_mapping` method to define the mapping function elsewhere to reduce the length of `statement`
 
 ### Todo
 
