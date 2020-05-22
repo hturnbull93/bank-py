@@ -278,7 +278,7 @@ Refactors:
 > So I know how much each deposit was,  
 > I want deposits on my statement to have the credit amount.
 
-Wrote a test for constructing a transaction object with a credit value as a keyword argument, its `display` method should include that value in the second column of the returned string. Red.
+Wrote a test for constructing a transaction instance with a credit value as a keyword argument, its `display` method should include that value in the second column of the returned string. Red.
 
 - `__init__` takes the keyword argument credit defaulting to `None`, assigning this to `self.credit`.
 - The method `format` takes self and `item`, then if `item` is not `None`,  it uses `pounds` imported from `money` to convert the item, then formats that as a 2 decimal place figure with a trailing space, else returns an empty string.
@@ -286,6 +286,13 @@ Wrote a test for constructing a transaction object with a credit value as a keyw
 
 Geen.
 
+- [x] 4.3
+
+> As a Customer,  
+> So I know how much each withdrawal was,  
+> I want withdrawals on my statement to have the debit amount.
+
+Wrote a test for constructing a transaction instance passing in debit value as keyword argument, its `display` method should include the debit value in the third column of the returned string. Red.
 
 
 
