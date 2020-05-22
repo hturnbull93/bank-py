@@ -194,7 +194,8 @@ Green.
 
 Refactors:
 
-- Extracted methods `pence` and `pounds`
+- Extracted methods `pence` and `pounds` to handle conversion to and from pounds and pence.
+- Moved these into their own module `money`
 
 
 <!-- links -->
