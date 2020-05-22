@@ -2,4 +2,4 @@ def pence(pounds):
     return pounds * 100
 
 def pounds(pence):
-    return pence / 100
+    return "{:.2f}".format(pence / 100)

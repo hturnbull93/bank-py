@@ -23,6 +23,6 @@ class Transaction:
 
     def format(self, item):
         if item is not None:
-            template = "{:.2f} "
+            template = "{} "
             return template.format(pounds(item))
         return ""

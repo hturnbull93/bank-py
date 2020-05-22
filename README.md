@@ -314,7 +314,8 @@ Green.
 
 Refactors:
 
-As the column delimiters are all " ||", switch to an list that is joined by that delimiter instead of a template string.
+- As the column delimiters are all " ||", switch to an list that is joined by that delimiter instead of a template string.
+- Extract out the two decimal place formatting from format to the `money.pounds` function.
 
 <!-- links -->
 
