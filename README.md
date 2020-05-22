@@ -324,10 +324,15 @@ Refactors:
 
 The `Transaction` class can now be injected into the `Account` class.
 
-Wrote a test that the `deposit` method should call for a new `Transaction`.
+Wrote a test that the `deposit` method should call for a new `Transaction` passing credit and balance.
 
 - `Account.__init__` takes a keyword argument `transaction_class` defaulting to `Transaction`.
 - `deposit` calls for a new `Transaction` instance passing in credit and balance.
+
+Green.
+
+Wrote a test that the `withdraw` method should call for a new `Transaction` passing debit and balance.
+
 
 <!-- links -->
 

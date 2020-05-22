@@ -13,7 +13,7 @@ class Account:
     def deposit(self, amount):
         credit = money.pence(amount)
         self.balance += credit
-        transaction = self.TRANSACTION_CLASS(credit, balance=self.balance)
+        transaction = self.TRANSACTION_CLASS(credit=credit, balance=self.balance)
         message = "{0} deposited. Current balance: {1}"
         return message.format(money.pounds(credit), money.pounds(self.balance))
 
@@ -22,5 +22,6 @@ class Account:
         if debit > self.balance:
             return "Insufficient funds"
         self.balance -= debit
+        transaction = self.TRANSACTION_CLASS(debit=debit, balance=self.balance)
         message = "{0} withdrawn. Current balance: {1}"
         return message.format(money.pounds(debit), money.pounds(self.balance))
