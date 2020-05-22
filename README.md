@@ -22,6 +22,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
   - [Statement](#statement)
   - [Transactions](#transactions)
   - [Back to the Statement](#back-to-the-statement)
+  - [Todo](#todo)
 
 ## Spec
 
@@ -345,7 +346,18 @@ Passing the feature test:
 
 - In `Account`'s `__init__` method, assign `self.TRANSACTION_HISTORY` as an empty list.
 - In `__add_transaction`, append the created transaction onto the `TRANSACTION_HISTORY`.
-- 
+- The `statement` creates a copy of `self.TRANSACTION_HISTORY` in the constant `REVERSE_TRANSACTIONS`, which is then reverses.
+- A nested function `mapping` takes a transaction and calls `display` on it.
+- `MAPPED_ROWS` is assigned with the map of `mapping` and `REVERSE_TRANSACTIONS`.
+- Then `JOINED_ROWS` is assigned with a `SEPARATOR` ("\n") joining the `MAPPED_ROWS`.
+- Finally, it returns `self.STATEMENT_HEADER` (a string with the titles for the columns) concatenated with `JOINED_ROWS`.
+
+### Todo
+
+- [ ] Extract printer class.
+- [ ] See if it is best practice to define anything that isn't intended to change as a CONSTANT.
+- [ ] Get it actually working in a REPL.
+- [ ] Do the mock dependency injection properly when I have more time.
 
 <!-- links -->
 

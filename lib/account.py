@@ -5,6 +5,7 @@ from .transaction import Transaction
 
 class Account:
     STARTING_BALANCE = 0
+    STATEMENT_HEADER = "date || credit || debit || balance \n"
 
     def __init__(self, transaction_class=Transaction):
         self.balance = self.STARTING_BALANCE
@@ -26,6 +27,16 @@ class Account:
         self.__add_transaction(debit=debit, balance=self.balance)
         message = "{0} withdrawn. Current balance: {1}"
         return message.format(money.pounds(debit), money.pounds(self.balance))
+
+    def statement(self):
+        REVERSE_TRANSACTIONS = self.TRANSACTION_HISTORY.copy()
+        REVERSE_TRANSACTIONS.reverse()
+        def mapping(transaction):
+            return transaction.display()
+        MAPPED_ROWS = map(mapping, REVERSE_TRANSACTIONS)
+        SEPARATOR = "\n"
+        JOINED_ROWS = SEPARATOR.join(MAPPED_ROWS)
+        return self.STATEMENT_HEADER + JOINED_ROWS
 
     def __add_transaction(self, credit=None, debit=None, balance=None):
         transaction = self.TRANSACTION_CLASS(credit, debit, balance)
