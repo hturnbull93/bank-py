@@ -29,8 +29,7 @@ class Account:
         return message.format(money.pounds(debit), money.pounds(self.balance))
 
     def statement(self):
-        REVERSE_TRANSACTIONS = self.TRANSACTION_HISTORY.copy()
-        REVERSE_TRANSACTIONS.reverse()
+        REVERSE_TRANSACTIONS = self.__reverse_transactions()
         def mapping(transaction):
             return transaction.display()
         MAPPED_ROWS = map(mapping, REVERSE_TRANSACTIONS)
@@ -41,3 +40,8 @@ class Account:
     def __add_transaction(self, credit=None, debit=None, balance=None):
         transaction = self.TRANSACTION_CLASS(credit, debit, balance)
         self.TRANSACTION_HISTORY.append(transaction)
+
+    def __reverse_transactions(self):
+        REVERSE_TRANSACTIONS = self.TRANSACTION_HISTORY.copy()
+        REVERSE_TRANSACTIONS.reverse()
+        return REVERSE_TRANSACTIONS

@@ -352,6 +352,9 @@ Passing the feature test:
 - Then `JOINED_ROWS` is assigned with a `SEPARATOR` ("\n") joining the `MAPPED_ROWS`.
 - Finally, it returns `self.STATEMENT_HEADER` (a string with the titles for the columns) concatenated with `JOINED_ROWS`.
 
+Refactors: 
+
+- Extracted a `__reverse_transactions` method to copy and reverse the transactions.
 ### Todo
 
 - [ ] Extract printer class.
