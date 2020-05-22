@@ -14,9 +14,9 @@ class Transaction:
     def display(self):
         separator = "|| "
         items = [
-            self.DATE_FORMAT, 
-            self.__render(self.credit), 
-            self.__render(self.debit), 
+            self.DATE_FORMAT,
+            self.__render(self.credit),
+            self.__render(self.debit),
             self.__render(self.balance)
         ]
         return separator.join(items)
