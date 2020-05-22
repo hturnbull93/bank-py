@@ -11,3 +11,9 @@ class TestDeposit:
         account = Account()
         result = "200.00 deposited. Current balance: 200.00"
         assert account.deposit(200) == result
+
+    def test_pass_200_then_100_balance_300(self):
+        account = Account()
+        account.deposit(200)
+        result = "100.00 deposited. Current balance: 300.00"
+        assert account.deposit(100) == result
