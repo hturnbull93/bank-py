@@ -333,6 +333,9 @@ Green.
 
 Wrote a test that the `withdraw` method should call for a new `Transaction` passing debit and balance.
 
+- `withdraw` calls for a new `Transaction` instance passing in debit and balance.
+
+Green.
 
 <!-- links -->
 
