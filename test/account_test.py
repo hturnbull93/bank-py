@@ -1,8 +1,6 @@
 from lib.account import Account
 
 
-
-
 class TestDeposit:
     def test_pass_100_balance_100(self):
         account = Account()
@@ -24,6 +22,7 @@ class TestDeposit:
         account = Account()
         result = "10.50 deposited. Current balance: 10.50"
         assert account.deposit(10.50) == result
+
 
 class TestWithdraw:
     def account_with_one_thousand_deposited(self):
@@ -51,4 +50,3 @@ class TestWithdraw:
         account = self.account_with_one_thousand_deposited()
         result = "Insufficient funds"
         assert account.withdraw(1500) == result
-
