@@ -103,7 +103,7 @@ CRC modelling:
 > So I can keep on top of my finances,  
 > I want to be able to print my account statement
 
-- [ ] 4.1
+- [x] 4.1
 
 > As a Customer,  
 > So I know when each transaction happened,  
@@ -253,7 +253,7 @@ To help solve the feature test I think I should implement `Transaction`s.
 
 ### Transactions
 
-- [ ] 4.1
+- [x] 4.1
 
 > As a Customer,  
 > So I know when each transaction happened,  
@@ -272,6 +272,13 @@ Refactors:
 
 - I realised I had not been using instance variables for things like `Account` `balance` and `Transaction` `DATE` etc. (My bad, I am new at python!). Added `__init__` methods to initialise new instances and set instance variables.
 
+- [x] 4.2
+
+> As a Customer,  
+> So I know how much each deposit was,  
+> I want deposits on my statement to have the credit amount.
+
+Wrote a test for constructing a transaction object with a credit value, its `display` method should include that value in the second column of the returned string. Red.
 
 
 <!-- links -->
