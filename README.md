@@ -295,7 +295,7 @@ Green.
 Wrote a test for constructing a transaction instance passing in debit value as keyword argument, its `display` method should include the debit value in the third column of the returned string. Red.
 
 - `__init__` takes the keyword argument debit defaulting to `None`, assigning this to `self.debit`.
-- In the third column of the template string, the `format` of `self.debit`.
+- In the third column of the template string, insert the `format` of `self.debit`.
 
 Green.
 
@@ -306,6 +306,12 @@ Green.
 > I want transactions on my statement to have the balance amount after the transaction was completed.
 
 Wrote a test for constructing a transaction instance passing in balance value as keyword argument, its `display` method should include the balance value in the fourth column of the returned string. Red.
+
+- `__init__` takes the keyword argument balance defaulting to `None`, assigning this to `self.balance`.
+- In the fourth column of the template string, insert the `format` of `self.debit`.
+
+Green.
+
 
 
 <!-- links -->
