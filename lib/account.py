@@ -2,7 +2,10 @@ from . import money
 
 class Account:
     STARTING_BALANCE = 0
-    balance = STARTING_BALANCE
+
+    def __init__(self):
+        self.balance = self.STARTING_BALANCE
+
     def deposit(self, amount):
         credit = money.pence(amount)
         self.balance += credit
