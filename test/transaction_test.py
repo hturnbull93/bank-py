@@ -22,3 +22,9 @@ class TestDisplay():
             transaction = Transaction(debit=10000)
             result = "01/01/2020 || || 100.00 || "
             assert transaction.display() == result
+
+    def test_has_balance_shown(self):
+        with freeze_time("2020-01-01"):
+            transaction = Transaction(balance=10000)
+            result = "01/01/2020 || || || 100.00 "
+            assert transaction.display() == result

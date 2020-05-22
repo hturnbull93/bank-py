@@ -299,6 +299,15 @@ Wrote a test for constructing a transaction instance passing in debit value as k
 
 Green.
 
+- [ ] 4.4
+
+> As a Customer,  
+> So can keep track of my balance,  
+> I want transactions on my statement to have the balance amount after the transaction was completed.
+
+Wrote a test for constructing a transaction instance passing in balance value as keyword argument, its `display` method should include the balance value in the fourth column of the returned string. Red.
+
+
 <!-- links -->
 
 [pytest]: https://docs.pytest.org/en/latest/
