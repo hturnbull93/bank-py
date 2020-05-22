@@ -52,13 +52,13 @@ class TestWithdraw:
         assert account.withdraw(1500) == result
 
 class MockTransaction:
-    def __init__(self, credit=None):
-        print("MockTransaction.__init__ called with {}".format(credit))
+    def __init__(self, credit=None, balance=None):
+        print("MockTransaction.__init__ called with credit:{}, balance:{}".format(credit, balance))
 
 class TestTransactionUse:
     def test_deposit_uses_transaction(self, capfd):
         account = Account(transaction_class=MockTransaction)
         account.deposit(100)
         captured = capfd.readouterr()
-        expected_output = "MockTransaction.__init__ called with 10000\n"
+        expected_output = "MockTransaction.__init__ called with credit:10000, balance:10000\n"
         assert captured.out == expected_output
