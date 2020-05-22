@@ -182,6 +182,8 @@ Wrote test for `deposit` method taking 200 then 100 results in a string showing 
 
 Green.
 
+Wrote test for `deposit` method taking 10.50, should in a string showing deposited 10.50 and balance of 10.50. Red.
+
 <!-- links -->
 
 [pytest]: https://docs.pytest.org/en/latest/
