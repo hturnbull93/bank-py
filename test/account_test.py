@@ -51,14 +51,31 @@ class TestWithdraw:
         result = "Insufficient funds"
         assert account.withdraw(1500) == result
 
-class MockTransaction:
-    def __init__(self, credit=None, balance=None):
-        print("MockTransaction.__init__ called with credit:{}, balance:{}".format(credit, balance))
+
+class MockDepositTransaction:
+    def __init__(self, credit=None, debit=None, balance=None):
+        if credit is not None:
+            print("credit:{}, balance:{}".format(credit, balance))
+
+
+class MockWithdrawTransaction:
+    def __init__(self, credit=None, debit=None, balance=None):
+        if debit is not None:
+            print("debit:{}, balance:{}".format(debit, balance))
+
 
 class TestTransactionUse:
     def test_deposit_uses_transaction(self, capfd):
-        account = Account(transaction_class=MockTransaction)
+        account = Account(transaction_class=MockDepositTransaction)
         account.deposit(100)
         captured = capfd.readouterr()
-        expected_output = "MockTransaction.__init__ called with credit:10000, balance:10000\n"
+        expected_output = "credit:10000, balance:10000\n"
+        assert captured.out == expected_output
+
+    def test_withdraw_uses_transaction(self, capfd):
+        account = Account(transaction_class=MockWithdrawTransaction)
+        account.deposit(100)
+        account.withdraw(100)
+        captured = capfd.readouterr()
+        expected_output = "debit:10000, balance:0\n"
         assert captured.out == expected_output
