@@ -220,6 +220,9 @@ Wrote test for withdrawing 200 from an account with 1000, returned string has ba
 
 Green.
 
+Wrote test for withdrawing 200 then 100 from an account with 1000, returned string has balance: 700.00. Red.
+
+`withdraw` implements similar functionality to `deposit` but deducting the amount from the balance.
 
 
 

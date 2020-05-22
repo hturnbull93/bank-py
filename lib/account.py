@@ -10,6 +10,7 @@ class Account:
         return message.format(money.pounds(credit), money.pounds(self.balance))
 
     def withdraw(self, amount):
-        if amount == 200:
-            return "200.00 withdrawn. Current balance: 800.00"
-        return "100.00 withdrawn. Current balance: 900.00"
+        debit = money.pence(amount)
+        self.balance -= debit
+        message = "{0:.2f} withdrawn. Current balance: {1:.2f}"
+        return message.format(money.pounds(debit), money.pounds(self.balance))
