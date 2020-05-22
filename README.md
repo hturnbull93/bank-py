@@ -312,7 +312,9 @@ Wrote a test for constructing a transaction instance passing in balance value as
 
 Green.
 
+Refactors:
 
+As the column delimiters are all " ||", switch to an list that is joined by that delimiter instead of a template string.
 
 <!-- links -->
 
