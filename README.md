@@ -50,7 +50,46 @@ date || credit || debit || balance
 
 ## Quick Start
 
-Coming soon.
+1. Clone this repo.
+
+2. Install dependencies with:
+
+   ```shell
+   pip install -U pytest
+   pip install -U freezegun
+   ```
+
+3. Run tests with:
+
+   ```shell
+   py.test
+   ```
+
+4. Run the Python3 REPl:
+
+   ```shell
+   python3
+   ```
+
+5. Import in `Account` with:
+
+   ```python
+   from lib.account import Account
+   ```
+
+6. Set up your account with:
+
+   ```js
+   account = Account()
+   ```
+
+7. Use the account with the following methods:
+
+| Method                     | Description                                                                                        |
+| -------------------------- | -------------------------------------------------------------------------------------------------- |
+| `account.deposit(number)`  | deposit however much you want into your account, this figure is in pounds with pence as decimals.  |
+| `account.withdraw(number)` | withdraw however much you want from your account, this figure is in pounds with pence as decimals. |
+| `account.statement()`      | prints a statement of all transactions so far                                                      |
 
 ## Screen Preview
 
@@ -123,7 +162,7 @@ CRC modelling:
 > So I know how much each withdrawal was,  
 > I want withdrawals on my statement to have the debit amount.
 
-- [ ] 4.4
+- [x] 4.4
 
 > As a Customer,  
 > So can keep track of my balance,  
@@ -241,7 +280,7 @@ Wrote test for withdrawing 1500 from an account with 1000, string returned shoul
 
 ### Statement
 
-- [ ] 4
+- [x] 4
 
 > As a Customer,  
 > So I can keep on top of my finances,  
@@ -359,8 +398,8 @@ Refactors:
 
 ### Todo
 
-- [ ] Write quickstart guide.
-- [ ] Add screen previews.
+- [x] Write quickstart guide.
+- [x] Add screen previews.
 - [ ] Extract printer class.
 - [ ] See if it is best practice to define anything that isn't intended to change as a CONSTANT.
 - [ ] Get it actually working in a REPL.
