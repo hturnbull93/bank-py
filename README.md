@@ -129,7 +129,7 @@ CRC modelling:
 > So can keep track of my balance,  
 > I want transactions on my statement to have the balance amount after the transaction was completed.
 
-- [ ] 4.5
+- [x] 4.5
 
 > As a Customer,  
 > Because more recent transactions are more important to me,  
@@ -192,7 +192,7 @@ Wrote test for `deposit` method taking 10.50, should in a string showing deposit
 
 The balance should probably be stored as pence, rather than as a float, but it needs to be display at two decimal places as if it were pounds and pence.
 
-- In `deposit` assign `credit` with the passed amount * 100, to express it as pence.
+- In `deposit` assign `credit` with the passed amount \* 100, to express it as pence.
 - add `credit` to the balance.
 - `displayBalance` and `displayCredit` assigned with the balance and credit divided by 100 (to convert the pence figure to pounds and pence).
 - Format string uses `:.2f` to convert to 2 decimal places.
@@ -283,7 +283,7 @@ Refactors:
 Wrote a test for constructing a transaction instance with a credit value as a keyword argument, its `display` method should include that value in the second column of the returned string. Red.
 
 - `__init__` takes the keyword argument credit defaulting to `None`, assigning this to `self.credit`.
-- The method `format` takes self and `item`, then if `item` is not `None`,  it uses `pounds` imported from `money` to convert the item, then formats that as a 2 decimal place figure with a trailing space, else returns an empty string.
+- The method `format` takes self and `item`, then if `item` is not `None`, it uses `pounds` imported from `money` to convert the item, then formats that as a 2 decimal place figure with a trailing space, else returns an empty string.
 - `display` formats in the `format` of `self.credit` in column two.
 
 Green.
@@ -301,7 +301,7 @@ Wrote a test for constructing a transaction instance passing in debit value as k
 
 Green.
 
-- [ ] 4.4
+- [x] 4.4
 
 > As a Customer,  
 > So can keep track of my balance,  
@@ -352,9 +352,10 @@ Passing the feature test:
 - Then `JOINED_ROWS` is assigned with a `SEPARATOR` ("\n") joining the `MAPPED_ROWS`.
 - Finally, it returns `self.STATEMENT_HEADER` (a string with the titles for the columns) concatenated with `JOINED_ROWS`.
 
-Refactors: 
+Refactors:
 
 - Extracted a `__reverse_transactions` method to copy and reverse the transactions.
+
 ### Todo
 
 - [ ] Extract printer class.
