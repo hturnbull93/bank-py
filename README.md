@@ -359,6 +359,8 @@ Refactors:
 
 ### Todo
 
+- [ ] Write quickstart guide.
+- [ ] Add screen previews.
 - [ ] Extract printer class.
 - [ ] See if it is best practice to define anything that isn't intended to change as a CONSTANT.
 - [ ] Get it actually working in a REPL.
@@ -368,3 +370,4 @@ Refactors:
 
 [pytest]: https://docs.pytest.org/en/latest/
 [freezegun]: https://github.com/spulec/freezegun/
+[Source]: https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md
