@@ -232,7 +232,7 @@ Wrote test for withdrawing 200 then 100 from an account with 1000, returned stri
 
 Wrote test for withdrawing 1500 from an account with 1000, string returned should say "Insufficient funds". Red.
 
-
+- Added guard clause to check if the amount to be withdrawn is greater than the current balance, if so return the string.
 
 <!-- links -->
 

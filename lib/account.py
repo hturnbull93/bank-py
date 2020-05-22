@@ -11,6 +11,7 @@ class Account:
 
     def withdraw(self, amount):
         debit = money.pence(amount)
+        if debit > self.balance: return "Insufficient funds"
         self.balance -= debit
         message = "{0:.2f} withdrawn. Current balance: {1:.2f}"
         return message.format(money.pounds(debit), money.pounds(self.balance))
