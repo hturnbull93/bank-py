@@ -337,6 +337,10 @@ Wrote a test that the `withdraw` method should call for a new `Transaction` pass
 
 Green.
 
+Refactors:
+
+- As the behaviour in `deposit` and `withdraw` is similar, extracted a private helper method `_addTransaction`, which `deposit` and `withdraw` call.
+
 <!-- links -->
 
 [pytest]: https://docs.pytest.org/en/latest/
