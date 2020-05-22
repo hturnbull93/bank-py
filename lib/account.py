@@ -1,16 +1,17 @@
 from . import money
 
 from .transaction import Transaction
+from .printer import Printer
 
 
 class Account:
     STARTING_BALANCE = 0
-    STATEMENT_HEADER = "date || credit || debit || balance \n"
 
-    def __init__(self, transaction_class=Transaction):
+    def __init__(self, transaction_class=Transaction, printer_class = Printer):
         self.balance = self.STARTING_BALANCE
         self.TRANSACTION_CLASS = transaction_class
         self.TRANSACTION_HISTORY = []
+        self.PRINTER = printer_class()
 
     def deposit(self, amount):
         credit = money.pence(amount)
@@ -31,9 +32,7 @@ class Account:
     def statement(self):
         REVERSE_TRANSACTIONS = self.__reverse_transactions()
         MAPPED_ROWS = map(self.__transaction_mapping, REVERSE_TRANSACTIONS)
-        SEPARATOR = "\n"
-        JOINED_ROWS = SEPARATOR.join(MAPPED_ROWS)
-        return self.STATEMENT_HEADER + JOINED_ROWS
+        self.PRINTER.print_statement(MAPPED_ROWS)
 
     def __add_transaction(self, credit=None, debit=None, balance=None):
         transaction = self.TRANSACTION_CLASS(credit, debit, balance)

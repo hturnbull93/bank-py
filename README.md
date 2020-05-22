@@ -22,6 +22,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
   - [Statement](#statement)
   - [Transactions](#transactions)
   - [Back to the Statement](#back-to-the-statement)
+  - [Extracting a Printer Class](#extracting-a-printer-class)
   - [Todo](#todo)
 
 ## Spec
@@ -395,6 +396,16 @@ Refactors:
 
 - Extracted a `__reverse_transactions` method to copy and reverse the transactions.
 - Also extracted a `__transaction_mapping` method to define the mapping function elsewhere to reduce the length of `statement`
+
+### Extracting a Printer Class
+
+Adjusted feature test to check stdout for the statement. Red.
+
+- Extracted `STATEMENT_HEADER` to a class `Printer` and the separator and joining of rows to its `print_statement` method.
+- Injected `Printer` into `Account` and call its `print_statement` method in `statement` passing in the `MAPPED_ROWS`.
+
+Green.
+
 
 ### Todo
 
