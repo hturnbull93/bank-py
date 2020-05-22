@@ -60,8 +60,8 @@ Coming soon.
 
 Development:
 
-[pytest] - Testing framework.
-[freezegun] - datetime module mock library.
+- [pytest] - Testing framework.
+- [freezegun] - datetime module mock library.
 
 ## Development Journal
 
@@ -99,7 +99,7 @@ CRC modelling:
 > So we don't go out of pocket,  
 > I want withdrawals to only be allowed to occur if the customer has sufficient funds
 
-- [ ] 4
+- [x] 4
 
 > As a Customer,  
 > So I can keep on top of my finances,  
