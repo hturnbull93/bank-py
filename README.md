@@ -20,6 +20,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
   - [Deposits](#deposits)
   - [Withdrawals](#withdrawals)
   - [Statement](#statement)
+  - [Transactions](#transactions)
 
 ## Spec
 
@@ -248,6 +249,23 @@ The feature test I want to write needs to be able to have the date mocked. For t
 
 In `test/account_feature_test.py` wrote a feature test similar to the above acceptance criteria, using freezegun to mock the date. Red.
 
+To help solve the feature test I think I should implement `Transaction`s.
+
+### Transactions
+
+- [ ] 4.1
+
+> As a Customer,  
+> So I know when each transaction happened,  
+> I want transactions on my statement to have the date
+
+In `test/transaction_test.py` wrote a test for the `display` method of the `Transaction` class to return a string with the formatted date in the first column. Red.
+
+_freezetime here is used when importing Transaction, as the time is applied at the time of import to the class (not sure why, but it works)._
+
+In `lib/transaction.py`:
+
+- `Transaction`'s 
 
 
 <!-- links -->
