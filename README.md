@@ -19,6 +19,7 @@ It allows you to create an account, deposit funds into it, withdraw funds from i
   - [Set up](#set-up)
   - [Deposits](#deposits)
   - [Withdrawals](#withdrawals)
+  - [Statement](#statement)
 
 ## Spec
 
@@ -56,7 +57,8 @@ Coming soon.
 
 Development:
 
-[pytest] - Testing framework
+[pytest] - Testing framework.
+[freezegun] - datetime module mock library.
 
 ## Development Journal
 
@@ -224,7 +226,7 @@ Wrote test for withdrawing 200 then 100 from an account with 1000, returned stri
 
 `withdraw` implements similar functionality to `deposit` but deducting the amount from the balance.
 
-- [ ] 3.1
+- [x] 3.1
 
 > As a Bank Manager,  
 > So we don't go out of pocket,  
@@ -234,6 +236,21 @@ Wrote test for withdrawing 1500 from an account with 1000, string returned shoul
 
 - Added guard clause to check if the amount to be withdrawn is greater than the current balance, if so return the string.
 
+### Statement
+
+- [ ] 4
+
+> As a Customer,  
+> So I can keep on top of my finances,  
+> I want to be able to print my account statement
+
+The feature test I want to write needs to be able to have the date mocked. For this I will use the [freezegun] library, installed with `pip install -U freezegun`.
+
+In `test/account_feature_test.py` wrote a feature test similar to the above acceptance criteria, using freezegun to mock the date. Red.
+
+
+
 <!-- links -->
 
 [pytest]: https://docs.pytest.org/en/latest/
+[freezegun]: https://github.com/spulec/freezegun/
