@@ -316,6 +316,8 @@ Refactors:
 
 - As the column delimiters are all " ||", switch to an list that is joined by that delimiter instead of a template string.
 - Extract out the two decimal place formatting from format to the `money.pounds` function.
+- Renamed `Transaction`'s `format` method to `render` to avoid confusion with the string method `format`.
+- Renamed helper methods that should be private prepending two underscores to their name.
 
 <!-- links -->
 

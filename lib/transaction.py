@@ -15,13 +15,13 @@ class Transaction:
         separator = "|| "
         items = [
             self.DATE_FORMAT, 
-            self.format(self.credit), 
-            self.format(self.debit), 
-            self.format(self.balance)
+            self.__render(self.credit), 
+            self.__render(self.debit), 
+            self.__render(self.balance)
         ]
         return separator.join(items)
 
-    def format(self, item):
+    def __render(self, item):
         if item is not None:
             template = "{} "
             return template.format(pounds(item))
