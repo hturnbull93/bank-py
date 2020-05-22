@@ -278,7 +278,15 @@ Refactors:
 > So I know how much each deposit was,  
 > I want deposits on my statement to have the credit amount.
 
-Wrote a test for constructing a transaction object with a credit value, its `display` method should include that value in the second column of the returned string. Red.
+Wrote a test for constructing a transaction object with a credit value as a keyword argument, its `display` method should include that value in the second column of the returned string. Red.
+
+- `__init__` takes the keyword argument credit defaulting to `None`, assigning this to `self.credit`.
+- The method `format` takes self and `item`, then if `item` is not `None`,  it uses `pounds` imported from `money` to convert the item, then formats that as a 2 decimal place figure with a trailing space, else returns an empty string.
+- `display formats in the `format` of `self.credit` in column two.
+
+Geen.
+
+
 
 
 <!-- links -->
