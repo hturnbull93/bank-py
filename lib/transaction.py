@@ -2,9 +2,10 @@ import datetime
 
 
 class Transaction:
-    date = datetime.datetime.now()
-    date_format = date.strftime("%d/%m/%Y")
+    def __init__(self):
+        self.DATE = datetime.datetime.now()
+        self.DATE_FORMAT = self.DATE.strftime("%d/%m/%Y")
 
     def display(self):
         template = "{} || || || "
-        return template.format(self.date_format)
+        return template.format(self.DATE_FORMAT)

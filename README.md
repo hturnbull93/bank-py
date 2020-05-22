@@ -261,11 +261,17 @@ To help solve the feature test I think I should implement `Transaction`s.
 
 In `test/transaction_test.py` wrote a test for the `display` method of the `Transaction` class to return a string with the formatted date in the first column. Red.
 
-_freezetime here is used when importing Transaction, as the time is applied at the time of import to the class (not sure why, but it works)._
-
 In `lib/transaction.py`:
 
-- `Transaction`'s 
+- `Transaction` has a `DATE` constant set with the current date and time. It also has a `DATE_FORMAT` constant that is set with a formatted version of `DATE`.
+- `display` is a method that has a variable `template` assigned with a format strig, and it returns the template with the `DATE_FORMAT` formatted into it.
+
+Green.
+
+Refactors:
+
+- I realised I had not been using instance variables for things like `Account` `balance` and `Transaction` `DATE` etc. (My bad, I am new at python!). Added `__init__` methods to initialise new instances and set instance variables.
+
 
 
 <!-- links -->
