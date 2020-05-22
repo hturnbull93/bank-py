@@ -3,8 +3,7 @@ import datetime
 
 from lib.account import Account
 
-
-def test_feature():
+def test_feature(capfd):
     account = Account()
 
     with freeze_time("2012-01-10"):
@@ -21,8 +20,11 @@ def test_feature():
         "date || credit || debit || balance ",
         "14/01/2012 || || 500.00 || 2500.00 ",
         "13/01/2012 || 2000.00 || || 3000.00 ",
-        "10/01/2012 || 1000.00 || || 1000.00 ",
+        "10/01/2012 || 1000.00 || || 1000.00 \n",
     ]
     result = separator.join(statement)
 
-    assert account.statement() == result
+    account.statement()
+
+    captured = capfd.readouterr()
+    assert captured.out == result
