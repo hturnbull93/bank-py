@@ -339,7 +339,13 @@ Green.
 
 Refactors:
 
-- As the behaviour in `deposit` and `withdraw` is similar, extracted a private helper method `_addTransaction`, which `deposit` and `withdraw` call.
+- As the behaviour in `deposit` and `withdraw` is similar, extracted a private helper method `__add_transaction`, which `deposit` and `withdraw` call.
+
+Passing the feature test:
+
+- In `Account`'s `__init__` method, assign `self.TRANSACTION_HISTORY` as an empty list.
+- In `__add_transaction`, append the created transaction onto the `TRANSACTION_HISTORY`.
+- 
 
 <!-- links -->
 
