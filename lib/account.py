@@ -1,5 +1,6 @@
 from . import money
 
+
 class Account:
     STARTING_BALANCE = 0
 
@@ -14,7 +15,8 @@ class Account:
 
     def withdraw(self, amount):
         debit = money.pence(amount)
-        if debit > self.balance: return "Insufficient funds"
+        if debit > self.balance:
+            return "Insufficient funds"
         self.balance -= debit
         message = "{0} withdrawn. Current balance: {1}"
         return message.format(money.pounds(debit), money.pounds(self.balance))
