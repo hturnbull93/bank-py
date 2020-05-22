@@ -210,6 +210,11 @@ Refactors:
 
 Wrote test for withdrawing 100 from an account with 1000, returned string has balance: 900.00. Red.
 
+- Add `withdraw` method returning a hardcoded string.
+
+Green.
+
+Wrote test for withdrawing 200 from an account with 1000, returned string has balance: 800.00. Red.
 
 
 <!-- links -->
